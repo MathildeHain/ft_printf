@@ -6,11 +6,12 @@
 /*   By: mathain <mathain@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 12:20:52 by mathain           #+#    #+#             */
-/*   Updated: 2026/11/27 09:45:41 by mathain          ###   ########.fr       */
+/*   Updated: 2026/11/27 09:49:52 by mathain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 int	ft_print_char(int c)
 {
