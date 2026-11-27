@@ -6,12 +6,13 @@
 /*   By: mathain <mathain@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/27 09:54:14 by mathain           #+#    #+#             */
-/*   Updated: 2026/11/27 10:07:56 by mathain          ###   ########.fr       */
+/*   Updated: 2026/11/27 11:14:16 by mathain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
+#include <stddef.h>
 
 int	ft_dispatch(char c, va_list args)
 {
@@ -32,4 +33,32 @@ int	ft_dispatch(char c, va_list args)
 	else if (c == '%')
 		return (ft_print_char('%'));
 	return (-1);
+}
+
+int	ft_printf(const char *format, ...)
+{
+	va_list args;
+	size_t	i;
+	int		count;
+	int		ret;
+
+	i = 0;
+	count = 0;
+	va_start(args, format);
+	while (format[i])
+	{
+		if (format[i] == '%' && format[i + 1])
+			ret = ft_dispatch(format[++i], args);
+		else
+			ret = ft_print_char(format[i]);
+		if (ret == -1)
+		{
+			va_end(args);
+			return (-1);
+		}
+		count += ret;
+		i++;
+	}
+	va_end(args);
+	return (count);
 }
