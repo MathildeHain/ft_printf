@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathain <mathain@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/26 12:01:45 by mathain           #+#    #+#             */
-/*   Updated: 2026/11/26 12:04:37 by mathain          ###   ########.fr       */
+/*   Created: 2026/11/27 09:30:26 by mathain           #+#    #+#             */
+/*   Updated: 2026/11/27 09:31:55 by mathain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-# define FT_PRINT_H
+# define FT_PRINTF_H
 
-int ft_printf(const char *format, ...);
+int	ft_printf(const char *format, ...);
 
 #endif
