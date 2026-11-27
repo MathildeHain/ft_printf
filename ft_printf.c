@@ -6,7 +6,7 @@
 /*   By: mathain <mathain@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/27 09:54:14 by mathain           #+#    #+#             */
-/*   Updated: 2026/11/27 11:14:16 by mathain          ###   ########.fr       */
+/*   Updated: 2026/11/27 11:17:16 by mathain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_dispatch(char c, va_list args)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
+	va_list	args;
 	size_t	i;
 	int		count;
 	int		ret;
