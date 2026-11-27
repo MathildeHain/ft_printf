@@ -6,7 +6,7 @@
 /*   By: mathain <mathain@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 12:20:52 by mathain           #+#    #+#             */
-/*   Updated: 2026/11/27 09:36:22 by mathain          ###   ########.fr       */
+/*   Updated: 2026/11/27 09:45:41 by mathain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,16 @@ int	ft_print_base(unsigned long n, char *base)
 	}
 	ft_putchar_fd(base[n % len], 1);
 	return (count + 1);
+}
+
+int	ft_print_ptr(void *p)
+{
+	int	count;
+
+	if (p == NULL)
+		return (write(1, "(nil)", 5));
+	count = write(1, "0x", 2);
+	if (count == -1)
+		return (-1);
+	return (count + ft_print_base((unsigned long)p, "0123456789abcdef"));
 }
